@@ -4,7 +4,9 @@
   "description": "Menu Food",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "dev" : "NODE_ENV=development nodemon src/server/",
+    "start" : "NODE_ENV=production node src/server/"
   },
   "repository": {
     "type": "git",
