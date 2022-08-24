@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>food control</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <aside id="side-bar">
+        <i id="bars" class="fa fa-solid fa-bars"></i>
+        <h1>FOoOD Panel</h1>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./categories.html">Categories</a></li>
+          <li><a href="./meals.html">Meals</a></li>
+        </ul>
+      </aside>
+      <main>
+        <div class="page-title">
+          <h1>Meals</h1>
+          <button>Add new</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Image</th>
+              <th class="th-actions" colspan="2">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr>
+              <td>${index + 1 }</td>
+              <td>${obj.name}</td>
+              <td>${obj.category}</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1661280770370-290bfcb66f56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80"
+                  alt="random"
+                />
+              </td>
+              <td class="td-btn">
+                <i class="fa fa-solid fa-trash"></i>
+              </td>
+              <td class="td-btn">
+                <i
+                  class="fa fa-solid fa-pen-to-square"
+                  onclick="editPopUp()"
+                ></i>
+              </td>
+            </tr>
+            <tr>
+              <td>${index + 1 }</td>
+              <td>${obj.name}</td>
+              <td>${obj.category}</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1661280770370-290bfcb66f56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80"
+                  alt="random"
+                />
+              </td>
+              <td class="td-btn">
+                <i class="fa fa-solid fa-trash"></i>
+              </td>
+              <td class="td-btn">
+                <i
+                  class="fa fa-solid fa-pen-to-square"
+                  onclick="editPopUp()"
+                ></i>
+              </td>
+            </tr>
+            <tr>
+              <td>${index + 1 }</td>
+              <td>${obj.name}</td>
+              <td>${obj.category}</td>
+              <td>
+                <img
+                  src="https://images.unsplash.com/photo-1661280770370-290bfcb66f56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80"
+                  alt="random"
+                />
+              </td>
+              <td class="td-btn">
+                <i class="fa fa-solid fa-trash"></i>
+              </td>
+              <td class="td-btn">
+                <i
+                  class="fa fa-solid fa-pen-to-square"
+                  onclick="editPopUp()"
+                ></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pop-up" id="popup">
+          <form action="#" method="">
+            <div>
+              <label for="name">Name :</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div>
+              <label for="description">Description :</label>
+              <input type="text" name="description" id="description" />
+            </div>
+            <div>
+              <label for="imageUrl">Image URL :</label>
+              <input type="text" name="imageUrl" id="imageUrl" />
+            </div>
+            <div>
+              <label for="category">selet Category :</label>
+              <select name="cars" id="cars">
+                <option value="0">Volvo</option>
+                <option value="1">Saab</option>
+                <option value="2">Mercedes</option>
+                <option value="3">Audi</option>
+              </select>
+            </div>
+            <button type="submit" onclick="closeEditPopUp()">Update</button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="../js/dom/admin.js"></script>
+  </body>
+</html>
