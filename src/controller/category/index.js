@@ -4,4 +4,4 @@ const editCategory = require('./editcategory');
 const getById = require('./getById');
 const getcategories = require('./getCategories');
 
-module.exports = {addCategory, deletById, getById, getcategories,editCategory}
+module.exports = {addCategory, deletById, getById, getcategories,editCategory};
