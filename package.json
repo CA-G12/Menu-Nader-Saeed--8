@@ -4,9 +4,10 @@
   "description": "Menu Food",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "dev" : "NODE_ENV=development nodemon src/server/",
-    "start" : "NODE_ENV=production node src/server/"
+    "test": "NODE_ENV=development jest",
+    "dev": "NODE_ENV=development nodemon src/server/",
+    "start": "NODE_ENV=production node src/server/",
+    "bTables": "node src/database/buildDB"
   },
   "repository": {
     "type": "git",
