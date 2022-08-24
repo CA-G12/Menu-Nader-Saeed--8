@@ -9,10 +9,11 @@ CREATE TABLE categories(
 
 CREATE TABLE meals(
     id serial PRIMARY KEY,
+    category_id int NOT NULL,
     name VARCHAR(100) NOT NULL,
     image TEXT NOT NULL,
-    categories_id INT REFERENCES categories(id),
-    description TEXT
+    description VARCHAR(100),
+    FOREIGN KEY (category_id) REFERENCES categories(id) on delete cascade on update cascade
 );
 
 COMMIT;
