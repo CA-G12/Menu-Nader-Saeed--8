@@ -1,5 +1,7 @@
-const CategoryController = require("./category/index")
-
-
-
 module.exports = {CategoryController}
+
+const mealController = require("./meal/index");
+const categoryController = require("./category/index");
+
+module.exports = { mealController, categoryController };
+
