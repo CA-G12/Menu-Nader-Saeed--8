@@ -5,8 +5,8 @@ beforeAll(() => {
   return buildDB();
 });
 test("get Meals query", () => {
-  mealQueries.getMeal().then((data) => {
-    // console.log(data);
+  mealQueries.getMeals().then((data) => {
+    console.log(data.rows, "asasasa");
     expect(data.rows.length).toBe(0);
   });
 });
@@ -25,7 +25,7 @@ test("add Meal query", () => {
   mealQueries
     .addMeal("name", "image", "description", 1)
     .then((data) => {
-      console.log(data.rows.length, "lefggfdgsfdgfdgdgsfdgsdfggth");
+      console.log(data.rows, "lefggfdgsfdgfdgdgsfdgsdfggth");
       expect(data.rows.length).toBe(1);
     })
     .catch((err) => {
@@ -33,8 +33,8 @@ test("add Meal query", () => {
     });
 });
 test("get Meals query", () => {
-  mealQueries.getMeal().then((data) => {
-    // console.log(data);
+  mealQueries.getMeals().then((data) => {
+    console.log(data.rows);
     expect(data.rows.length).toBe(2);
   });
 });
